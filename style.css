@@ -348,3 +348,110 @@ footer {
         padding: 9px 5px;
     }
 }
+/* =================================
+   DUAL SORTING VISUALIZERS
+================================= */
+
+.algorithm-panel {
+    background: #172742;
+    border: 1px solid #344967;
+    border-radius: 12px;
+    padding: 25px;
+    margin: 30px 0;
+}
+
+.algorithm-panel h3 {
+    color: #60a5fa;
+    font-size: 23px;
+    margin-bottom: 10px;
+}
+
+.status {
+    color: #cbd5e1;
+    margin: 12px 0;
+    text-align: left;
+}
+
+.algorithm-panel .bars {
+    min-height: 230px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 5px;
+    overflow: hidden;
+}
+
+.algorithm-panel .bar {
+    flex: 1;
+    min-width: 3px;
+    max-width: 45px;
+    background: linear-gradient(to top, #2563eb, #38bdf8);
+    border-radius: 5px 5px 0 0;
+    transition: height 0.2s ease, background 0.2s ease;
+}
+
+.algorithm-panel .bar.comparing {
+    background: #f59e0b;
+}
+
+.algorithm-panel .bar.swapping {
+    background: #ef4444;
+}
+
+.algorithm-panel .bar.sorted {
+    background: #22c55e;
+}
+
+.animation-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.animation-controls button,
+#compareAlgorithms {
+    padding: 11px 19px;
+    border: none;
+    border-radius: 7px;
+    background: #2563eb;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.animation-controls button:hover,
+#compareAlgorithms:hover {
+    background: #3b82f6;
+}
+
+.animation-controls button:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+}
+
+#bubbleStep,
+#mergeStep {
+    color: #93c5fd;
+    margin-top: 15px;
+}
+
+#compareAlgorithms {
+    display: block;
+    margin: 25px auto;
+}
+
+@media (max-width: 600px) {
+    .algorithm-panel {
+        padding: 15px;
+    }
+
+    .animation-controls button {
+        flex: 1 1 40%;
+    }
+
+    .algorithm-panel .bars {
+        min-height: 180px;
+        gap: 2px;
+    }
+}
