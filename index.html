@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Interactive comparison of Bubble Sort and Merge Sort algorithms.">
+    <title>Sorting Comparison | Bubble Sort vs Merge Sort</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+            <h2>SortLab</h2>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#visualizer">Visualizer</a>
+                <a href="#comparison">Comparison</a>
+                <a href="#about">About</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <p class="tagline">DATA STRUCTURES & ALGORITHMS</p>
+            <h1>Sorting Algorithm Comparison</h1>
+            <h2>Bubble Sort vs Merge Sort</h2>
+            <p>
+                Explore, visualize and compare two fundamental
+                sorting algorithms through interactive demonstrations.
+            </p>
+            <a href="#visualizer" class="main-button">
+                Start Visualizing
+            </a>
+        </section>
+
+        <section id="visualizer" class="section">
+            <h2>Interactive Sorting Visualizer</h2>
+            <p>Enter your numbers and observe how both algorithms work.</p>
+
+            <div class="controls">
+                <input type="text" id="arrayInput"
+                    placeholder="Enter numbers: 45, 12, 78, 23">
+
+                <button id="setArray">Set Numbers</button>
+                <button id="randomArray">Generate Random</button>
+                <button id="startSort">Compare Sorting</button>
+            </div>
+
+            <div id="bars" class="bars"></div>
+
+            <div class="results">
+                <div class="result-card">
+                    <h3>Bubble Sort</h3>
+                    <p id="bubbleTime">Execution time: --</p>
+                    <p id="bubbleOutput">Sorted output: --</p>
+                </div>
+
+                <div class="result-card">
+                    <h3>Merge Sort</h3>
+                    <p id="mergeTime">Execution time: --</p>
+                    <p id="mergeOutput">Sorted output: --</p>
+                </div>
+            </div>
+
+            <p id="verification">Verification: Waiting for comparison</p>
+        </section>
+
+        <section id="comparison" class="section">
+            <h2>Algorithm Comparison</h2>
+
+            <table>
+                <tr>
+                    <th>Parameter</th>
+                    <th>Bubble Sort</th>
+                    <th>Merge Sort</th>
+                </tr>
+                <tr>
+                    <td>Best Case</td>
+                    <td>O(n)</td>
+                    <td>O(n log n)</td>
+                </tr>
+                <tr>
+                    <td>Average Case</td>
+                    <td>O(n²)</td>
+                    <td>O(n log n)</td>
+                </tr>
+                <tr>
+                    <td>Worst Case</td>
+                    <td>O(n²)</td>
+                    <td>O(n log n)</td>
+                </tr>
+                <tr>
+                    <td>Space Complexity</td>
+                    <td>O(1)</td>
+                    <td>O(n)</td>
+                </tr>
+            </table>
+        </section>
+
+        <section id="about" class="section">
+            <h2>About This Project</h2>
+            <p>
+                This mini project implements Bubble Sort and Merge Sort
+                and compares their execution time using identical input data.
+                Both algorithms are tested for correctness and performance.
+            </p>
+            <p>
+                Programming language: Python (original implementation)
+                and JavaScript (interactive website implementation).
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Sorting Comparison Mini Project | B.Tech CSE | 2026–2027</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
