@@ -37,36 +37,95 @@
         </section>
 
         <section id="visualizer" class="section">
-            <h2>Interactive Sorting Visualizer</h2>
-            <p>Enter your numbers and observe how both algorithms work.</p>
 
-            <div class="controls">
-                <input type="text" id="arrayInput"
-                    placeholder="Enter numbers: 45, 12, 78, 23">
+    <h2>Interactive Sorting Visualizer</h2>
+    <p>Enter your numbers and watch both algorithms work independently.</p>
 
-                <button id="setArray">Set Numbers</button>
-                <button id="randomArray">Generate Random</button>
-                <button id="startSort">Compare Sorting</button>
-            </div>
+    <!-- SHARED INPUT -->
 
-            <div id="bars" class="bars"></div>
+    <div class="controls">
+        <input type="text" id="arrayInput"
+            placeholder="Enter numbers: 45, 12, 78, 23">
 
-            <div class="results">
-                <div class="result-card">
-                    <h3>Bubble Sort</h3>
-                    <p id="bubbleTime">Execution time: --</p>
-                    <p id="bubbleOutput">Sorted output: --</p>
-                </div>
+        <button id="setArray">Set Numbers</button>
+        <button id="randomArray">Generate Random</button>
+    </div>
 
-                <div class="result-card">
-                    <h3>Merge Sort</h3>
-                    <p id="mergeTime">Execution time: --</p>
-                    <p id="mergeOutput">Sorted output: --</p>
-                </div>
-            </div>
+    <!-- BUBBLE SORT -->
 
-            <p id="verification">Verification: Waiting for comparison</p>
-        </section>
+    <div class="algorithm-panel">
+
+        <h3>Bubble Sort Visualizer</h3>
+
+        <p id="bubbleStatus" class="status">
+            Ready to start Bubble Sort
+        </p>
+
+        <div id="bubbleBars" class="bars"></div>
+
+        <div class="animation-controls">
+            <button id="bubbleStart">Start</button>
+            <button id="bubblePause">Pause</button>
+            <button id="bubbleResume">Resume</button>
+            <button id="bubbleReset">Reset</button>
+        </div>
+
+        <p id="bubbleStep">Step: 0</p>
+
+    </div>
+
+    <!-- MERGE SORT -->
+
+    <div class="algorithm-panel">
+
+        <h3>Merge Sort Visualizer</h3>
+
+        <p id="mergeStatus" class="status">
+            Ready to start Merge Sort
+        </p>
+
+        <div id="mergeBars" class="bars"></div>
+
+        <div class="animation-controls">
+            <button id="mergeStart">Start</button>
+            <button id="mergePause">Pause</button>
+            <button id="mergeResume">Resume</button>
+            <button id="mergeReset">Reset</button>
+        </div>
+
+        <p id="mergeStep">Step: 0</p>
+
+    </div>
+
+    <!-- PERFORMANCE COMPARISON -->
+
+    <h2>Execution Time Comparison</h2>
+
+    <button id="compareAlgorithms">
+        Compare Sorting Performance
+    </button>
+
+    <div class="results">
+
+        <div class="result-card">
+            <h3>Bubble Sort</h3>
+            <p id="bubbleTime">Execution time: --</p>
+            <p id="bubbleOutput">Sorted output: --</p>
+        </div>
+
+        <div class="result-card">
+            <h3>Merge Sort</h3>
+            <p id="mergeTime">Execution time: --</p>
+            <p id="mergeOutput">Sorted output: --</p>
+        </div>
+
+    </div>
+
+    <p id="verification">
+        Verification: Waiting for comparison
+    </p>
+
+</section>
 
         <section id="comparison" class="section">
             <h2>Algorithm Comparison</h2>
